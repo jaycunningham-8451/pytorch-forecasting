@@ -130,7 +130,7 @@ class Ranger(Optimizer):
 
     def __setstate__(self, state: dict) -> None:
         super().__setstate__(state)
-        self.radam_buffer = state["radam_buffer"]
+        self.radam_buffer = state["state"]
         self.alpha = state["alpha"]
         self.k = state["k"]
         self.N_sma_threshhold = state["N_sma_threshhold"]
